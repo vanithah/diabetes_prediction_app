@@ -1,0 +1,77 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Ultra&display=swap" rel="stylesheet">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- css -->
+    <link rel="stylesheet" href="static\css\styles.css">
+
+
+    <title>Diabetes Detection app</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Diabetes Detection</h1>
+    </header>
+
+    <br>
+
+    <div class="ml-container">
+        <form action="/predict" method="POST">
+
+
+            <input class="form-input" type="text" name="pregnancies" placeholder="Number of times pregnant" required="required">
+            <br>
+            <input class="form-input" type="text" name="glucose" placeholder="Glucose (mg/dL)" required="required">
+            <br>
+            <input class="form-input" type="text" name="bloodPressure" placeholder="Blood Pressure (mmHg)" required="required">
+            <br>
+            <input class="form-input" type="text" name="SkinThickness" placeholder="Skin Thickness (mm)" required="required">
+            <br>
+            <input class="form-input" type="text" name="Insulin" placeholder="Insulin (mu U/ml)" required="required">
+            <br>
+            <input class="form-input" type="text" name="BMI" placeholder="BMI (kg/m²)" required="required">
+            <br>
+            <input class="form-input" type="text" name="Diabetes Pedigree Function" placeholder="Diabetes Pedigree Function"
+                required="required">
+            <br>
+            <input class="form-input" type="text" name="Age (in years)" placeholder="Age" required="required">
+            <br>
+            <br>
+            <button type="submit" class="my-cta-button"> Predict </button>
+
+
+        </form>
+
+        <br>
+	<br>
+
+        <h3><strong>{{ prediction_text }}</strong></h3>
+
+        <br>
+       
+	<br>
+    </div>
+    <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/vanithah"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/vanitha-h-ba3a631a0/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>By Vanitha H</p>
+    </div>
+
+    
+
+</body>
+
+</html>
